@@ -78,9 +78,9 @@ const dividerStyle: React.CSSProperties = {
 function ControlField({ label, hint, children }: { label: string; hint?: string; children: React.ReactNode }) {
   return (
     <div>
-      <div style={{ display: "flex", alignItems: "baseline", gap: "6px", marginBottom: "6px" }}>
-        <span style={{ ...sectionLabelStyle, marginBottom: 0 }}>{label}</span>
-        {hint && <span style={{ fontSize: "10px", color: "rgba(255,255,255,0.3)", letterSpacing: "0.2px", fontWeight: 400 }}>{hint}</span>}
+      <div style={{ marginBottom: "6px" }}>
+        <span style={{ ...sectionLabelStyle, marginBottom: hint ? "2px" : 0 }}>{label}</span>
+        {hint && <span style={{ display: "block", fontSize: "10px", color: "rgba(255,255,255,0.3)", letterSpacing: "0.2px", fontWeight: 400 }}>{hint}</span>}
       </div>
       {children}
     </div>
