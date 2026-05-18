@@ -75,10 +75,13 @@ const dividerStyle: React.CSSProperties = {
   margin: "0 -20px",
 };
 
-function ControlField({ label, children }: { label: string; children: React.ReactNode }) {
+function ControlField({ label, hint, children }: { label: string; hint?: string; children: React.ReactNode }) {
   return (
     <div>
-      <span style={sectionLabelStyle}>{label}</span>
+      <div style={{ display: "flex", alignItems: "baseline", gap: "6px", marginBottom: "6px" }}>
+        <span style={{ ...sectionLabelStyle, marginBottom: 0 }}>{label}</span>
+        {hint && <span style={{ fontSize: "10px", color: "rgba(255,255,255,0.3)", letterSpacing: "0.2px", fontWeight: 400 }}>{hint}</span>}
+      </div>
       {children}
     </div>
   );
@@ -276,23 +279,23 @@ function ConfigPanel({
 
         <div style={dividerStyle} />
 
-        <ControlField label="Tab 1 label">
-          <input style={inputStyle} value={config.label1} onChange={(e) => onChange({ label1: e.target.value })} />
+        <ControlField label="Tab 1 label" hint="max 20 characters incl spacing">
+          <input style={inputStyle} value={config.label1} maxLength={20} onChange={(e) => onChange({ label1: e.target.value })} />
         </ControlField>
 
-        <ControlField label="Tab 2 label">
-          <input style={inputStyle} value={config.label2} onChange={(e) => onChange({ label2: e.target.value })} />
+        <ControlField label="Tab 2 label" hint="max 20 characters incl spacing">
+          <input style={inputStyle} value={config.label2} maxLength={20} onChange={(e) => onChange({ label2: e.target.value })} />
         </ControlField>
 
         {config.tabCount >= 3 && (
-          <ControlField label="Tab 3 label">
-            <input style={inputStyle} value={config.label3} onChange={(e) => onChange({ label3: e.target.value })} />
+          <ControlField label="Tab 3 label" hint="max 20 characters incl spacing">
+            <input style={inputStyle} value={config.label3} maxLength={20} onChange={(e) => onChange({ label3: e.target.value })} />
           </ControlField>
         )}
 
         {config.tabCount >= 4 && (
-          <ControlField label="Tab 4 label">
-            <input style={inputStyle} value={config.label4} onChange={(e) => onChange({ label4: e.target.value })} />
+          <ControlField label="Tab 4 label" hint="max 20 characters incl spacing">
+            <input style={inputStyle} value={config.label4} maxLength={20} onChange={(e) => onChange({ label4: e.target.value })} />
           </ControlField>
         )}
 
