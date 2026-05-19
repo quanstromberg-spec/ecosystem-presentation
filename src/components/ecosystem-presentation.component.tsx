@@ -250,8 +250,6 @@ export const EcosystemPresentationComponent = ({
             borderTop: "1px solid rgba(0,0,0,0.08)",
             paddingTop: "32px",
             paddingBottom: "48px",
-            paddingLeft: "24px",
-            paddingRight: "24px",
             display: "flex",
             flexDirection: "column",
             gap: "28px",
@@ -260,7 +258,7 @@ export const EcosystemPresentationComponent = ({
           }}
         >
           {/* Title + intro */}
-          <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
+          <div style={{ display: "flex", flexDirection: "column", gap: "16px", paddingLeft: "40px", paddingRight: "40px" }}>
             <p style={mobileTitleStyle}>Your crafted eco-system</p>
             <p style={mobileBodyStyle}>
               Husqvarna products are powerful on their own — but their true potential is unlocked
@@ -272,20 +270,24 @@ export const EcosystemPresentationComponent = ({
 
           {/* Segment control + content */}
           <div style={{ display: "flex", flexDirection: "column", gap: "24px", width: "100%" }}>
-            <p style={mobileSubtitleStyle}>Three dimensions of Husqvarna's eco-system</p>
+            <p style={{ ...mobileSubtitleStyle, paddingLeft: "40px", paddingRight: "40px" }}>Three dimensions of Husqvarna's eco-system</p>
 
-            <SegmentControlComponent
-              key={`${clampedDefault}-${activeTabs.length}`}
-              items={activeTabs.map((t) => ({ label: t.label }))}
-              defaultActiveIndex={clampedDefault}
-              onActiveChange={handleTabChange}
-              isMobile={true}
-              buttonHug={true}
-              backgroundColor="grey"
-              activeStyle="default"
-            />
+            <div style={{ paddingLeft: "16px", paddingRight: "16px" }}>
+              <SegmentControlComponent
+                key={`${clampedDefault}-${activeTabs.length}`}
+                items={activeTabs.map((t) => ({ label: t.label }))}
+                defaultActiveIndex={clampedDefault}
+                onActiveChange={handleTabChange}
+                isMobile={true}
+                buttonHug={true}
+                backgroundColor="grey"
+                activeStyle="default"
+              />
+            </div>
 
-            {imageBlock}
+            <div style={{ paddingLeft: "16px", paddingRight: "16px" }}>
+              {imageBlock}
+            </div>
 
             {/* Body + read more — fade on change */}
             <div
@@ -294,6 +296,8 @@ export const EcosystemPresentationComponent = ({
                 display: "flex",
                 flexDirection: "column",
                 gap: "16px",
+                paddingLeft: "40px",
+                paddingRight: "40px",
                 animation: prevIndex !== null
                   ? `eco-fade-in ${SLIDE_DURATION}ms cubic-bezier(0.4, 0, 0.2, 1) forwards`
                   : "none",
