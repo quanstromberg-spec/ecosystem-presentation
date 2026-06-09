@@ -279,23 +279,23 @@ function ConfigPanel({
 
         <div style={dividerStyle} />
 
-        <ControlField label="Tab 1 label" hint="max 20 characters incl spacing">
-          <input style={inputStyle} value={config.label1} maxLength={20} onChange={(e) => onChange({ label1: e.target.value })} />
+        <ControlField label="Tab 1 label" hint="max 25 characters incl spacing">
+          <input style={inputStyle} value={config.label1} maxLength={25} onChange={(e) => onChange({ label1: e.target.value })} />
         </ControlField>
 
-        <ControlField label="Tab 2 label" hint="max 20 characters incl spacing">
-          <input style={inputStyle} value={config.label2} maxLength={20} onChange={(e) => onChange({ label2: e.target.value })} />
+        <ControlField label="Tab 2 label" hint="max 25 characters incl spacing">
+          <input style={inputStyle} value={config.label2} maxLength={25} onChange={(e) => onChange({ label2: e.target.value })} />
         </ControlField>
 
         {config.tabCount >= 3 && (
-          <ControlField label="Tab 3 label" hint="max 20 characters incl spacing">
-            <input style={inputStyle} value={config.label3} maxLength={20} onChange={(e) => onChange({ label3: e.target.value })} />
+          <ControlField label="Tab 3 label" hint="max 25 characters incl spacing">
+            <input style={inputStyle} value={config.label3} maxLength={25} onChange={(e) => onChange({ label3: e.target.value })} />
           </ControlField>
         )}
 
         {config.tabCount >= 4 && (
-          <ControlField label="Tab 4 label" hint="max 20 characters incl spacing">
-            <input style={inputStyle} value={config.label4} maxLength={20} onChange={(e) => onChange({ label4: e.target.value })} />
+          <ControlField label="Tab 4 label" hint="max 25 characters incl spacing">
+            <input style={inputStyle} value={config.label4} maxLength={25} onChange={(e) => onChange({ label4: e.target.value })} />
           </ControlField>
         )}
 
