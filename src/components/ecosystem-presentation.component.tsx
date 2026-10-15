@@ -250,7 +250,7 @@ export const EcosystemPresentationComponent = ({
         >
           {/* Title + intro */}
           <div style={{ display: "flex", flexDirection: "column", gap: "16px", paddingLeft: "40px", paddingRight: "40px" }}>
-            <p style={mobileTitleStyle}>Your crafted eco-system</p>
+            <p style={mobileTitleStyle}>A system for professionals</p>
             <p style={mobileBodyStyle}>
               Husqvarna products are powerful on their own — but their true potential is unlocked
               when they work as one system. By combining machines from the Husqvarna range with our
