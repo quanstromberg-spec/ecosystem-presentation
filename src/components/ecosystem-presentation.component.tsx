@@ -38,15 +38,6 @@ const mobileTitleStyle: React.CSSProperties = {
   margin: 0,
 };
 
-const mobileSubtitleStyle: React.CSSProperties = {
-  fontFamily: "'Husqvarna Gothic', sans-serif",
-  fontWeight: 700,
-  fontSize: "16px",
-  lineHeight: "20px",
-  color: COLOR_GREY600,
-  margin: 0,
-};
-
 const mobileBodyStyle: React.CSSProperties = {
   fontFamily: "'Roboto', sans-serif",
   fontWeight: 350,
@@ -270,7 +261,6 @@ export const EcosystemPresentationComponent = ({
 
           {/* Segment control + content */}
           <div style={{ display: "flex", flexDirection: "column", gap: "24px", width: "100%" }}>
-            <p style={{ ...mobileSubtitleStyle, paddingLeft: "40px", paddingRight: "40px" }}>Three dimensions of Husqvarna's eco-system</p>
 
             <div style={{ paddingLeft: "16px", paddingRight: "16px" }}>
               <SegmentControlComponent
